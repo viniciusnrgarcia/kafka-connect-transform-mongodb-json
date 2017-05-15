@@ -8,7 +8,7 @@ import java.util.Map;
 public class JsonTransformationConfig extends AbstractConfig {
 
     public JsonTransformationConfig(Map<String, ?> parsedConfig) {
-        super(config(), parsedConfig);
+        super(config(), parsedConfig, true);
     }
 
     public static ConfigDef config() {

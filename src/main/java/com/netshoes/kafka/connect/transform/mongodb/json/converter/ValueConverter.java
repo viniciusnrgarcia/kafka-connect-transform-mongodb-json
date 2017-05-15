@@ -20,7 +20,7 @@ public class ValueConverter {
 
     private static final Logger log = LoggerFactory.getLogger(JsonTransformation.class);
 
-    public Map<String, Object> toJson(final ConnectRecord record) {
+    public Map<String, Object> convert(final ConnectRecord record) {
         try {
             final Struct struct = (Struct) record.value();
             final Map<String, Object> mapJson = objectMapper.readValue(extractJsonPayload(struct), new TypeReference<Map<String, Object>>() {});

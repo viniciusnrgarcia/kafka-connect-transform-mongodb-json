@@ -5,6 +5,8 @@ Transforma o paylod do oplog(mongodb) em json.
 * Copiar a lib `jackson-datatype-jsr310-2.8.8.jar` para o diretório `confluent/share/java/kafka`.
 * Copiar o jar para o diretório `confluent/share/java/kafka-connect-transform-mongodb-json`.
 * Adicionar o transform na criação do connector.
+* Para adicionar mais de uma partição com garantia de ordem é necessário informar o 
+jsonPath que representa o id, considerando que o transform parte do payload, portanto não é necessário coloca-lo.
 
 ```
 {
@@ -17,7 +19,8 @@ Transforma o paylod do oplog(mongodb) em json.
     "mongodb.password" : "********",
     "collection.whitelist": "risk.riskAnalytics",
     "transforms": "JsonTransformation",
-    "transforms.JsonTransformation.type": "com.netshoes.kafka.connect.transform.mongodb.json.transform.JsonTransformation"
+    "transforms.JsonTransformation.type": "com.netshoes.kafka.connect.transform.mongodb.json.transform.JsonTransformation",
+    "transforms.JsonTransformation.field.key" : "_id"
   }
 }
 ```
