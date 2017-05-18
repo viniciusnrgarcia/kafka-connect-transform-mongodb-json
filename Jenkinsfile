@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 @Field String PROJECT = "kafka-connect-transform-mongodb-json"
-@Field String GIT_ORGANIZATION = "ERP"
+@Field String GIT_ORGANIZATION = "Arquitetura"
 @Field String MAVEN_PATH = "/bin/mvn"
 @Field String NS_GITHUB_OAUTH_TOKEN = "1944698ae35f8b199555527e3dd158f3fecb586b"
 
@@ -29,8 +29,11 @@ def buildJava() {
 def deployHMG(){
   stage ("Deploy on HMG"){
   node {
-     tagvalue = CUSTOM_TAG
-     def job = build job: 'freedom-middleware-app_run-docker-HMG', parameters: [[$class: 'StringParameterValue', name: 'FBMTAG', value: tagvalue]]
+      //deploy em hmg on /usr/share/java/kafka-connect-transform-mongodb-json
+      //freedom-bi-connectors (hmg) https://www.confluent.io/
+      //hmg-free-bi-connector-01.netshoes.local 172.18.56.234
+      //hmg-free-bi-connector-02.netshoes.local 172.18.56.235
+      //hmg-free-bi-connector-03.netshoes.local 172.18.56.236
      }
   }
 }
