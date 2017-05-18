@@ -1,5 +1,10 @@
 #!/usr/bin/env groovy
 
+import groovy.transform.Field
+import groovy.json.JsonSlurper
+import groovy.json.internal.LazyMap
+import java.util.concurrent.TimeUnit
+
 @Field String PROJECT = "kafka-connect-transform-mongodb-json"
 @Field String GIT_ORGANIZATION = "Arquitetura"
 @Field String MAVEN_PATH = "/bin/mvn"
