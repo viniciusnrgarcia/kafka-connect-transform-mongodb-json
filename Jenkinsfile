@@ -6,7 +6,7 @@ import groovy.json.internal.LazyMap
 import java.util.concurrent.TimeUnit
 
 @Field String PROJECT = "kafka-connect-transform-mongodb-json"
-@Field String GIT_ORGANIZATION = "Arquitetura"
+@Field String GIT_ORGANIZATION = "netshoes"
 @Field String MAVEN_PATH = "/bin/mvn"
 @Field String NS_GITHUB_OAUTH_TOKEN = "1944698ae35f8b199555527e3dd158f3fecb586b"
 
@@ -19,7 +19,7 @@ def clearWorkspace() {
 
 def gitClone() {
     stage("Git Clone ${PROJECT}") {
-        git credentialsId: '35256404-e1a7-4b81-bc38-9eb67d20a7a8', url: "https://github.ns2online.com.br/${GIT_ORGANIZATION}/${PROJECT}"
+        git credentialsId: '35256404-e1a7-4b81-bc38-9eb67d20a7a8', url: "https://github.com/${GIT_ORGANIZATION}/${PROJECT}"
     }
 }
 
