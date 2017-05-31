@@ -43,7 +43,7 @@ def deployHMG(){
   }
 }
 
-node("erp-jenkins-slave0") {
+node() {
     try {
         clearWorkspace()
         gitClone()
