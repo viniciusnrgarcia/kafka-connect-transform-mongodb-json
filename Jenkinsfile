@@ -19,7 +19,7 @@ def clearWorkspace() {
 
 def gitClone() {
     stage("Git Clone ${PROJECT}") {
-        git credentialsId: '35256404-e1a7-4b81-bc38-9eb67d20a7a8', url: "https://github.com/${GIT_ORGANIZATION}/${PROJECT}"
+        git credentialsId: '56cfb7ed-219d-4132-8975-68fee35035d5', url: "https://github.com/${GIT_ORGANIZATION}/${PROJECT}"
     }
 }
 
