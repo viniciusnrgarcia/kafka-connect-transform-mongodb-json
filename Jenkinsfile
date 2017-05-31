@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit
 @Field String PROJECT = "kafka-connect-transform-mongodb-json"
 @Field String GIT_ORGANIZATION = "netshoes"
 @Field String MAVEN_PATH = "/bin/mvn"
-@Field String NS_GITHUB_OAUTH_TOKEN = "1944698ae35f8b199555527e3dd158f3fecb586b"
+@Field String NS_GITHUB_OAUTH_TOKEN = "c262b64c81d50187893a5e691500fc0d6923727a"
 
 def clearWorkspace() {
     stage("Cleaning Workspace for ${PROJECT}") {
